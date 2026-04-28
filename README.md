@@ -64,3 +64,24 @@ ng serve
 Open your browser and navigate to `http://localhost:4200`
 
 ## Project Structure
+src/
+├── app/
+│   ├── components/
+│   │   └── navbar/
+│   ├── pages/
+│   │   ├── home/
+│   │   ├── about/
+│   │   ├── skills/
+│   │   ├── projects/
+│   │   └── contact/
+│   ├── app.ts
+│   ├── app.html
+│   └── app.routes.ts
+└── styles.scss
+
+## Contact
+
+Ezana Tefera
+- Email: etefera11@gmail.com
+- LinkedIn: [linkedin.com/in/ezanatefera](https://linkedin.com/in/ezanatefera)
+- GitHub: [github.com/etefera11](https://github.com/etefera11)
