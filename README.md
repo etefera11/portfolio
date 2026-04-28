@@ -64,6 +64,8 @@ ng serve
 Open your browser and navigate to `http://localhost:4200`
 
 ## Project Structure
+
+```
 src/
 ├── app/
 │   ├── components/
@@ -78,6 +80,7 @@ src/
 │   ├── app.html
 │   └── app.routes.ts
 └── styles.scss
+```
 
 ## Contact
 
