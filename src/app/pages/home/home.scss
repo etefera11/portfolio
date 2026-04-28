@@ -1,0 +1,88 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 65px);
+    margin-top: -60px;
+    padding: 2rem;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle, #cbd5e1 1.5px, transparent 1.5px);
+    background-size: 25px 25px;
+
+    .hero-content {
+        max-width: 700px;
+        text-align: center;
+
+        .hero-greeting {
+            font-size: 1.1rem;
+            color: #555555;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1F3864;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .hero-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #374151;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: #555555;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+
+            .btn-primary {
+                background-color: #1F3864;
+                color: #ffffff;
+                padding: 0.75rem 2rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: background-color 0.2s;
+
+                &:hover {
+                    background-color: #162a4a;
+                }
+            }
+
+            .btn-secondary {
+                background-color: transparent;
+                color: #1F3864;
+                padding: 0.75rem 2rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;
+                border: 2px solid #1F3864;
+                transition: all 0.2s;
+
+                &:hover {
+                    background-color: #1F3864;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    .cursor {
+        color: #1F3864;
+        font-weight: 300;
+
+        &.hidden {
+            opacity: 0;
+        }
+    }
+}
