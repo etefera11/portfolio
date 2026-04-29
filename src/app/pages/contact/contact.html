@@ -2,32 +2,50 @@
   <div class="contact-container">
     <h1 class="section-title">Get In Touch</h1>
     <p class="contact-subtitle">Have an opportunity or just want to connect? Send me a message.</p>
-
     <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" [(ngModel)]="formData.name" required placeholder="Your name" />
+        <input type="text" id="name" name="name" [(ngModel)]="formData.name" required minlength="2" #name="ngModel"
+          placeholder="Your name" />
+        @if (name.invalid && name.touched) {
+        <span class="field-error">
+          {{ name.errors?.['required'] ? 'Name is required.' : 'Name must be at least 2 characters.' }}
+        </span>
+        }
       </div>
 
       <div class="form-group">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" [(ngModel)]="formData.email" required
-          placeholder="your@email.com" />
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel" placeholder="your@email.com" />
+        @if (email.invalid && email.touched) {
+        <span class="field-error">
+          {{ email.errors?.['required'] ? 'Email is required.' : 'Please enter a valid email address.' }}
+        </span>
+        }
       </div>
 
       <div class="form-group">
         <label for="message">Message</label>
-        <textarea id="message" name="message" [(ngModel)]="formData.message" required rows="6"
-          placeholder="Your message..."></textarea>
+        <textarea id="message" name="message" [(ngModel)]="formData.message" required minlength="10" #message="ngModel"
+          rows="6" placeholder="Your message..."></textarea>
+        @if (message.invalid && message.touched) {
+        <span class="field-error">
+          {{ message.errors?.['required'] ? 'Message is required.' : 'Message must be at least 10 characters.' }}
+        </span>
+        }
       </div>
+
       <button type="submit" class="btn-submit" [disabled]="contactForm.invalid || sending || submitted">
         {{ submitted ? 'Message Sent!' : sending ? 'Sending...' : 'Send Message' }}
       </button>
-      @if (error) {
-      <p style="color: red; margin-top: 0.5rem;">{{ error }}</p>
-      }
-    </form>
 
+      @if (error) {
+      <p class="form-error">{{ error }}</p>
+      }
+
+    </form>
     <div class="contact-links">
       <a href="mailto:etefera11@gmail.com">etefera11@gmail.com</a>
       <a href="https://linkedin.com/in/ezanatefera" target="_blank">LinkedIn</a>
