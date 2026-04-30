@@ -1,0 +1,14 @@
+{
+  "name": "Ezana Tefera",
+  "short_name": "Ezana",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1F3864",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
