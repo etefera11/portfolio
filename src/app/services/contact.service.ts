@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'http://localhost:5284/api/contact';
+  private apiUrl = 'https://ezana-portfolio-api.azurewebsites.net/api/contact';
 
   constructor(private http: HttpClient) {}
 
