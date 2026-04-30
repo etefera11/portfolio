@@ -79,3 +79,23 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 3rem 1rem;
+
+    .projects-container {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        .project-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+}

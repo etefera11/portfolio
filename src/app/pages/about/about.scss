@@ -58,3 +58,22 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1rem;
+    overflow: hidden;
+
+    .about-container {
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .about-content {
+        .about-stats {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
+    }
+  }
+}

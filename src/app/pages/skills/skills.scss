@@ -53,3 +53,19 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 3rem 1rem;
+
+    .skills-container {
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

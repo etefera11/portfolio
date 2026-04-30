@@ -85,4 +85,12 @@
             opacity: 0;
         }
     }
+
+    .hero-buttons {
+        .btn-primary,
+        .btn-secondary {
+            min-width: 140px;
+            white-space: nowrap;
+        }
+    }
 }
