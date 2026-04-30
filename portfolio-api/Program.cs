@@ -10,7 +10,8 @@ builder.Services.AddCors(options =>
   {
     policy.WithOrigins(
       "http://localhost:4200",
-      "https://brave-plant-02fe80110.7.azurestaticapps.net"
+      "https://brave-plant-02fe80110.7.azurestaticapps.net",
+      "https://ezana.dev"
       )
       .AllowAnyHeader()
       .AllowAnyMethod();
