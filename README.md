@@ -1,31 +1,34 @@
-# Ezana Tefera - Portfolio
+# Ezana Tefera — Portfolio
 
-A personal portfolio website built with Angular 21 and designed to showcase my experience as a Software Development Lead with 5+ years of enterprise .NET development.
+Personal portfolio site built with Angular 21 and ASP.NET Core 10, deployed on Microsoft Azure.
 
-## Live Demo
-Coming soon
+🌐 **Live site:** [ezana.dev](https://ezana.dev)
 
 ## Tech Stack
 
 **Frontend**
-- Angular 21
+- Angular 21 (Standalone Components)
 - TypeScript
 - SCSS
 - Angular Router
 
-**Backend (Coming Soon)**
-- ASP.NET Core Web API
+**Backend**
+- ASP.NET Core 10 Web API
 - C#
-- REST API
+- MailKit (Gmail SMTP)
+
+**Cloud & DevOps**
+- Azure Static Web Apps (frontend)
+- Azure App Service (backend)
+- GitHub Actions CI/CD
+- Custom domain with Azure-provisioned SSL
 
 ## Features
-
 - Typing animation on hero section
-- Responsive navigation with social links
-- About page with key stats (5+ years experience, $1.3T assets, 980K+ users, 7 developers led)
-- Skills showcase with categorized pill tags
-- Projects portfolio with hover effects
-- Contact form
+- Responsive design with mobile hamburger navigation
+- Contact form with client-side and server-side validation
+- Email delivery via Gmail SMTP
+- Automated deployments on every push to master
 - Custom ET favicon
 - Clean white minimal design with dot grid background
 
@@ -37,34 +40,36 @@ Coming soon
 | About | Background, experience, and key metrics |
 | Skills | Technical skills organized by category |
 | Projects | Professional and personal project showcase |
-| Contact | Contact form with email, LinkedIn, and GitHub links |
+| Contact | Contact form with email delivery |
 
-## Getting Started
+## Architecture
+
+Angular Frontend (ezana.dev) → HTTP POST → ASP.NET Core API → SMTP → Gmail Inbox
+
+## Local Development
 
 ### Prerequisites
 - Node.js 22+
 - Angular CLI 21+
+- .NET 10 SDK
 
-### Installation
+### Frontend
 
 ```bash
-# Clone the repository
 git clone https://github.com/etefera11/portfolio.git
-
-# Navigate to project directory
 cd portfolio
-
-# Install dependencies
 npm install
-
-# Start development server
 ng serve
 ```
 
-Open your browser and navigate to `http://localhost:4200`
+### Backend
+
+```bash
+cd portfolio-api
+dotnet run
+```
 
 ## Project Structure
-
 ```
 src/
 ├── app/
@@ -76,15 +81,18 @@ src/
 │   │   ├── skills/
 │   │   ├── projects/
 │   │   └── contact/
-│   ├── app.ts
-│   ├── app.html
+│   ├── services/
+│   │   └── contact.service.ts
 │   └── app.routes.ts
-└── styles.scss
+portfolio-api/
+├── Controllers/
+├── Services/
+└── Models/
 ```
 
 ## Contact
 
 Ezana Tefera
 - Email: etefera11@gmail.com
-- LinkedIn: [linkedin.com/in/ezanatefera](https://linkedin.com/in/ezanatefera)
-- GitHub: [github.com/etefera11](https://github.com/etefera11)
+- LinkedIn: https://linkedin.com/in/ezanatefera
+- GitHub: https://github.com/etefera11
