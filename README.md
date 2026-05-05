@@ -1,4 +1,4 @@
-# Ezana Tefera — Portfolio
+# Ezana Tefera - Portfolio
 
 Personal portfolio site built with Angular 21 and ASP.NET Core 10, deployed on Microsoft Azure.
 
